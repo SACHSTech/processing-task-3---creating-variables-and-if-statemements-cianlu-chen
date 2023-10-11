@@ -1,8 +1,8 @@
 import processing.core.PApplet;
 
 /**
- * Main class to execute sketch
- * @author 
+ * Program that randomly draws an ellipse on the screen as well as displaying the current time
+ * @author L. Chen
  *
  */
 class Main {

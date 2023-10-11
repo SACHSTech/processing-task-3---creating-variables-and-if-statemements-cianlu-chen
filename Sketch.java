@@ -7,6 +7,7 @@ public class Sketch extends PApplet {
     size(500, 500);
   }
 
+  // Random background colour values
   Random randomRColour = new Random();
   int intRandomRColour = randomRColour.nextInt(256);
 
@@ -20,6 +21,7 @@ public class Sketch extends PApplet {
     background(intRandomRColour, intRandomGColour, intRandomBColour);
   }
 
+  // Random X and Y location
   Random randomWidth = new Random();
   int intRandomX = randomWidth.nextInt(501);
 
@@ -27,12 +29,14 @@ public class Sketch extends PApplet {
   int intRandomY = randomHeight.nextInt(501);
 
   public void draw() {
+    // Current time
     int intHour = hour();
     int intMinute = minute();
     int intSecond = second();
 
     println(intHour + ":" + intMinute + ":" + intSecond);
 
+    // Ellipse size varying with location
     if(intRandomX > 250 && intRandomY > 250){
       stroke(234, 153, 46);
       ellipse (intRandomX, intRandomY, 300, 100);
