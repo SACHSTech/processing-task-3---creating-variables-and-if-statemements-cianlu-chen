@@ -1,36 +1,56 @@
 import processing.core.PApplet;
+import java.util.Random; 
 
 public class Sketch extends PApplet {
 	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
   public void settings() {
-	// put your size call here
-    size(400, 400);
+    size(500, 500);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
+  Random randomRColour = new Random();
+  int intRandomRColour = randomRColour.nextInt(256);
+
+  Random randomGColour = new Random();
+  int intRandomGColour = randomGColour.nextInt(256);
+
+  Random randomBColour = new Random();
+  int intRandomBColour = randomBColour.nextInt(256);
+
   public void setup() {
-    background(210, 255, 173);
+    background(intRandomRColour, intRandomGColour, intRandomBColour);
   }
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
+  Random randomWidth = new Random();
+  int intRandomX = randomWidth.nextInt(501);
+
+  Random randomHeight = new Random();
+  int intRandomY = randomHeight.nextInt(501);
+
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+    int intHour = hour();
+    int intMinute = minute();
+    int intSecond = second();
 
-    stroke(255);
-    line(50, 125, 70, 50);  
+    println(intHour + ":" + intMinute + ":" + intSecond);
+
+    if(intRandomX > 250 && intRandomY > 250){
+      stroke(234, 153, 46);
+      ellipse (intRandomX, intRandomY, 300, 100);
+    }
+
+    else if(intRandomX < 250 && intRandomY < 250){
+      stroke(46, 153, 345);
+      ellipse (intRandomX, intRandomY, 100, 200);
+    }
+
+    else if(intRandomX < 250 || intRandomY < 250){
+      stroke(214, 6, 26);
+      ellipse (intRandomX, intRandomY, 250, 180);
+    }
+
+    else{
+      stroke(42, 55, 167);
+      ellipse (intRandomX, intRandomY, 100, 100);
+    }
   }
-  
-  // define other methods down here.
 }
