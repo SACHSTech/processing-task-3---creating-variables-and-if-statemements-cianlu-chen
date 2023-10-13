@@ -1,8 +1,8 @@
 import processing.core.PApplet;
 
 /**
- * Main class to execute sketch
- * @author 
+ * Program that randomly draws Moley in a random place
+ * @author L. Chen
  *
  */
 class Main {
