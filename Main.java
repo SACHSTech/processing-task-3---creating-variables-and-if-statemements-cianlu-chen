@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 
 /**
- * Program that randomly draws an ellipse on the screen as well as displaying the current time
+ * Program that randomly draws Moley in a random place
  * @author L. Chen
  *
  */
